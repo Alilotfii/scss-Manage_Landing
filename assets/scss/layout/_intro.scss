@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+
+.intro {
+    padding-top: 15rem;
+  
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        flex: 1;
+        padding-right: 10rem;
+
+        .title {
+            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            line-height: 5rem;
+            font-weight: 700;
+        }
+
+        .text {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: $gray-color;
+            font-weight: 400;
+            line-height: 2.5rem;
+        }
+
+    }
+
+    &__image {
+        flex: 1;
+    }
+
+}
+
+//  responsive section 
+@media (max-width:768px) {
+    .intro {
+        &__content {
+            flex-direction: column;
+            text-align: center;
+            gap: 5rem;
+        }
+
+        &__text {
+            padding: 0;
+        }
+    }
+}
